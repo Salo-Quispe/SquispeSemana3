@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="squispeS3AT3.Views.vUno"
+             Title="vUno">
+    <VerticalStackLayout
+    Spacing="20"
+    Padding="20">
+        <Label 
+        Text="INICIO DE SESION"
+        FontSize="20"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center" />
+        <Image
+        Source="uisrael.jpg"
+        WidthRequest="400"></Image>
+        <!--tabla-->
+        <Grid>
+            <!--//FILAS-->
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!--//COLUMNAS-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="USUARIO"
+               FontSize="18"
+               Grid.Row="0"
+               Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+               Placeholder="Ingrese el usuario"
+               Grid.Row="0"
+               Grid.Column="1"/>
+            <Label Text="CONTRASEÑA"
+               FontSize="18"
+               Grid.Row="1"
+               Grid.Column="0"/>
+            <Entry x:Name="txtContrasena"
+               Placeholder="Ingrese la contraseña"
+               IsPassword="True"
+               Grid.Row="1"
+               Grid.Column="1"/>
+        </Grid>
+
+        <Button x:Name="btnIncioSesion"
+            Text="Iniciar Sesion"
+            Clicked="btnIncioSesion_Clicked"/>
+        <Button x:Name="btnRegistro"
+                Text="Registrar"
+                Clicked="btnRegistro_Clicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
